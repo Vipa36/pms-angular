@@ -1,0 +1,14 @@
+<table class="tbl">
+  <thead class="thd">
+    <tr>
+      <th *ngFor="let row of trs">{{row.label}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prop of posts" id="trc">
+      <td *ngFor="let row of trs" id="tcc">
+        {{prop[row.value]}}
+      </td>
+    </tr>
+  </tbody>
+</table>

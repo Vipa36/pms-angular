@@ -1,0 +1,40 @@
+<mat-card class="crd">
+        <div class="example-button-row">
+          <button mat-button mat-raised-button color="primary" (click)="toggleAdd()">Add new Properties</button>
+          <button mat-button mat-raised-button id="right-bt" color="warn" (click)="toggleDel()">Delete Property</button>
+        </div>
+
+
+    <form (submit)="onAddPost(postForm)" class="ffield" *ngIf="isAdd" #postForm="ngForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Property name</mat-label>
+            <input matInput type="text" name="pname" ngModel required #pname="ngModel">
+            <mat-error *ngIf="pname.invalid">Please fill the name</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Enter description</mat-label>
+            <textarea matInput rows="3" name="desc" ngModel required #desc="ngModel"></textarea>
+            <mat-error *ngIf="desc.invalid">Please fill the description</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Enter size</mat-label>
+            <input matInput type="number" name="psize" ngModel required #psize="ngModel">
+            <mat-error *ngIf="psize.invalid">Please fill the size</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" >Save Post</button>
+    </form>
+
+    <form class="ffield" *ngIf="isDel" #delform='ngForm'>
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Property name to delete</mat-label>
+            <input matInput type="text" name="delname" ngModel required #delname="ngModel">
+        </mat-form-field>
+    
+        <button mat-raised-button color="warn" (click)="onDelete(delform)" >Delete!</button>
+    </form>
+
+</mat-card>
+

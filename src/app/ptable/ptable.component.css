@@ -1,0 +1,28 @@
+
+
+.tbl{
+    /* text-align:center; */
+    font-size:20px;
+    margin-top:4rem;
+    margin-left:10%;
+    margin-right:10%;
+    width:80%;
+    text-align:left;
+    border: 1px solid black;
+}
+
+.thd{
+    margin-bottom: 20px;
+    border-bottom:1px solid black;
+}
+
+#trc{
+    /* text-align: center; */
+    padding: 2rem;
+    border:1px solid black;
+    margin:auto;
+}
+
+#tcc{
+    border:1px solid black;
+}

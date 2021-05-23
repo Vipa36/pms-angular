@@ -1,0 +1,17 @@
+.crd{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3rem;
+}
+
+#right-bt{
+    float:right;
+}
+
+.ffield{
+    margin-top:3rem;
+}
+
+mat-form-field{
+    width:100%;
+}
